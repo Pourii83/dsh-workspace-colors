@@ -1,0 +1,56 @@
+{
+  "name": "@local/dsh-workspace-colors",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Set a custom color for each workspace in the DeepSeek Harness sidebar.",
+  "license": "MIT",
+  "author": "Pourii",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pourii83/dsh-workspace-colors.git"
+  },
+  "homepage": "https://github.com/Pourii83/dsh-workspace-colors#readme",
+  "bugs": {
+    "url": "https://github.com/Pourii83/dsh-workspace-colors/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "workspace",
+    "workspaces",
+    "colors",
+    "color-picker",
+    "sidebar",
+    "ui-plugin"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.fa.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ]
+    }
+  }
+}

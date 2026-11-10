@@ -1,0 +1,3 @@
+- insert:
+    - id: workspace-colors
+      name: '@local/dsh-workspace-colors'
